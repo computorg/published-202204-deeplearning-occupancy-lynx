@@ -5,13 +5,14 @@ format:
     include-in-header:
       - includes/metrics.html
       - includes/pseudocode-header.html
-    include-before-body: includes/banner.html
     include-after-body: includes/pseudocode-footer.html
+    date-format: long
     toc-title: >
       <a href="https://computo.sfds.asso.fr"><img style="width: 96px;" alt="Computo" src="https://computo.sfds.asso.fr/assets/img/logo_text_vertical.svg"/></a> <br/><br/>
       Contents
     toc: true
     theme: cosmo
+    license: "CC BY"    
     hover-citations: true
     hover-footnotes: true
     highlight-style: github
@@ -34,5 +35,4 @@ crossref:
   eq-prefix: Equation
   fig-prefix: Figure   
   tbl-prefix: Table
-execute:
-  keep-ipynb: true
+

@@ -1,15 +1,19 @@
 ---
 title: "Trade-off between deep learning for species identification and inference about predator-prey co-occurrence"
 subtitle: "Reproducible `R` workflow integrating models in computer vision and ecological statistics"
-date: >+
-  Last build: March 2022 <br/>  
+date: 30/03/2022
+descrition: |
   [![build status](https://github.com/computorg/{{< meta repo >}}/workflows/build/badge.svg)](https://github.com/computorg/{{< meta repo >}})
   [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/computorg/{{< meta repo >}}/gh-pages?filepath=content.ipynb)
   [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
 author:
-  - Olivier Gimenez, <olivier.gimenez@cefe.cnrs.fr>, UMR 5175 CEFE
-  - Maëlis Kervellec, <somebody@somewhere>, affiliation
+  - name: Olivier Gimenez
+    email: <olivier.gimenez@cefe.cnrs.fr>
+    affiliation: UMR 5175 CEFE
+    affiliation-url: 
+  - name: Maëlis Kervellec, <somebody@somewhere>, affiliation
   - Jean-Baptiste Fanjul, <somebody@somewhere>, affiliation
+
   - Anna Chaine, <somebody@somewhere>, affiliation
   - Lucile Marescot, <somebody@somewhere>, affiliation
   - Yoann Bollet, <somebody@somewhere>, affiliation
@@ -18,7 +22,11 @@ abstract: >+
   Deep learning is used in computer vision problems with important applications in several scientific fields. In ecology for example, there is a growing interest in deep learning for automatizing repetitive analyses on large amounts of images, such as animal species identification. However, there are challenging issues toward the wide adoption of deep learning by the community of ecologists. First, there is a programming barrier as most algorithms are written in `Python` while most ecologists are versed in `R`. Second, recent applications of deep learning in ecology have focused on computational aspects and simple tasks without addressing the underlying ecological questions or carrying out the statistical data analysis to answer these questions. Here, we showcase a reproducible `R` workflow integrating both deep learning and statistical models using predator-prey relationships as a case study. We illustrate deep learning for the identification of animal species on images collected with camera traps, and quantify spatial co-occurrence using multispecies occupancy models. Despite average model classification performances, ecological inference was similar whether we analysed the ground truth dataset or the classified dataset. This result calls for further work on the trade-offs between time and resources allocated to train models with deep learning and our ability to properly address key ecological questions with biodiversity monitoring. We hope that our reproducible workflow will be useful to ecologists and applied statisticians. <br/>
 
   **Keywords**: *deep learning*, *computer vision*, *ecological statistics*, *species distribution modeling*
-doi: 'example doi'
+citation:
+  type: article-journal
+  container-title: "Computo"
+  doi: ""
+  url: https://computo.sfds.asso.fr/published-202204-deeplearning-occupancy-lynx
 github: https://github.com/computorg/published-202204-deeplearning-occupancy-lynx
 bibliography: references.bib
 repo: "published-202204-deeplearning-occupancy-lynx"
@@ -1159,13 +1167,13 @@ data.frame(truth = c("lynx", "roe deer", "wild boar"),
 
 
 
-# Session information
+# Session information {.appendix}
 
 ```{r session-info}
 sessionInfo()
 ```
 
-# Acknowledgments
+# Acknowledgments {.appendix}
 
 We warmly thank Mathieu Massaviol, Remy Dernat and Khalid Belkhir for their help in using GPU machines on the Montpellier Bioinformatics Biodiversity platform, Julien Renoult for helpful discussions, Delphine Dinouart and Chloé Quillard for their precious help in manually tagging the images, and Vincent Miele for having inspired this work, and his help and support along the way. We also thank the staff of the Federations of Hunters from the Jura and Ain counties, hunters who helped to find locations for camera traps and volunteers who contributed in collecting data. Our thanks also go to Hannah Clipp, Chris Rota and Ken Kellner for sharing a development version of unmarked, and an unpublished version of their paper. The Lynx Predator Prey Program was funded by Auvergne-Rhône-Alpes Region, Ain and Jura departmental Councils, The French National Federation of Hunters, French Environmental Ministry based in Auvergne-Rhone-Alpes and Bourgogne Franche-Comté Region and the French Office for Biodiversity. Our work was also partly funded by the French National Research Agency (grant ANR-16-CE02-0007). 
 
