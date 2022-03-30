@@ -1,7 +1,7 @@
 number-sections: true
 format:
   html:
-    page-layout: full
+    page-layout: article
     include-in-header:
       - includes/metrics.html
       - includes/pseudocode-header.html
@@ -12,19 +12,21 @@ format:
       Contents
     toc: true
     theme: cosmo
-    license: "CC BY"    
+    license: "CC BY"
+    title-block-banner: "#034E79"
+    title-block-banner-color: "#FFFFFF"
     hover-citations: true
     hover-footnotes: true
     highlight-style: github
-    code-background: true
-    code-border-left: "#31BAE9"
+    code-block-background: true
+    code-block-border-left: "#034E79"
     code-tools:
       source: true
       toggle: false
       caption: "source"
     code-copy: true
-    code-fold: true
     code-summary: "Show the code"
+    code-fold: true
     anchor-sections: true
     link-external-icon: false
     link-external-newwindow: true
@@ -35,4 +37,3 @@ crossref:
   eq-prefix: Equation
   fig-prefix: Figure   
   tbl-prefix: Table
-
