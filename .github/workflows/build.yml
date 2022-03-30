@@ -6,6 +6,7 @@ on:
       - main
 
 env: # Change this if needed
+  quarto_file: dl-occupancy-lynx-paper
   GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
   
 jobs:
@@ -47,9 +48,9 @@ jobs:
         shell: bash -l {0}
         run: |
             mkdir _build
-            quarto render content.qmd
-            mv content.html _build/index.html
-            mv content.ipynb _build/
+            quarto render ${{ env.quarto_file }}.Rmd
+            mv ${{ env.quarto_file }}.html _build/index.html
+            mv ${{ env.quarto_file }}.ipynb _build/
             cp environment.yml _build/
 
       - name: Deploying article on github pages
