@@ -46,6 +46,7 @@ library(ggtext)
 library(fastai)
 library(highcharter)
 library(janitor)
+library(cvms)
 
 # visualise occupancy data
 # hack of the unmarked package plot function
@@ -575,6 +576,7 @@ To better understand this pattern, we display the results under the form of a co
 #    hc_xAxis(title = list(text = 'Predicted'),
 #             labels = list(rotation = -90)) 
 #perf_prediction
+library(cvms)
 d_binomial <- tibble('Actual' = tt_final_clean$observed,
                      'Predicted' = tt_final_clean$predicted)
 basic_table <- table(d_binomial)

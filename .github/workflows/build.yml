@@ -39,6 +39,7 @@ jobs:
       - name: Install additional R dependencies
         run: | 
           export LANG=en_US.UTF-8
+          conda activate computo
           conda run -n computo Rscript r-addons.R
  
       - name: Installing quarto
@@ -47,6 +48,7 @@ jobs:
       - name: Rendering with Quarto
         shell: bash -l {0}
         run: |
+            conda activate computo
             mkdir _build
             quarto render ${{ env.quarto_file }}.Rmd
             mv ${{ env.quarto_file }}.html _build/index.html
