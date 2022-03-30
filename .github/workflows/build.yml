@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env: # Change this if needed
+  GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+  
 jobs:
   computorticle:
     runs-on: ubuntu-latest
