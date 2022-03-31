@@ -7,32 +7,26 @@ descrition: |
 author:
   - name: Olivier Gimenez
     url: https://oliviergimenez.github.io/
-    affiliation: UMR 5175 CEFE
+    affiliation: CEFE, Univ Montpellier, CNRS, EPHE, IRD, Montpellier, France
     affiliation-url: https://www.cefe.cnrs.fr/
   - name: Maëlis Kervellec
-    url: 
-    affiliation: 
-    affiliation-url: 
+    affiliation: CEFE, Univ Montpellier, CNRS, EPHE, IRD, Montpellier, France
+    affiliation-url: https://www.cefe.cnrs.fr/
   - name: Jean-Baptiste Fanjul
-    url: 
-    affiliation:
-    affiliation-url: 
+    affiliation: Fédérations Départementales des Chasseurs du Jura, Arlay, France
+    affiliation-url: https://www.chasseurdujura.com/
   - name: Anna Chaine
-    url: 
-    affiliation:
-    affiliation-url: 
+    affiliation: CEFE, Univ Montpellier, CNRS, EPHE, IRD, Montpellier, France
+    affiliation-url: https://www.cefe.cnrs.fr/
   - name: Lucile Marescot
-    url: 
-    affiliation:
-    affiliation-url: 
+    affiliation: CBGP, Univ Montpellier, CIRAD, INRAE, Institut Agro, IRD, Montpellier, France
+    affiliation-url: https://www6.montpellier.inrae.fr/cbgp
   - name: Yoann Bollet
-    url: 
-    affiliation:
-    affiliation-url: 
+    affiliation: Fédération Départementale des Chasseurs de l'Ain, Bourg-en-Bresse, France
+    affiliation-url: http://www.fdcain.com/
   - name: Christophe Duchamp
-    url: 
-    affiliation:
-    affiliation-url: 
+    affiliation: Office Français de la Biodiversité, Unité Espèces à enjeux, Gap, France
+    affiliation-url: https://www.ofb.gouv.fr/
 abstract: >+
   Deep learning is used in computer vision problems with important applications in several scientific fields. In ecology for example, there is a growing interest in deep learning for automatizing repetitive analyses on large amounts of images, such as animal species identification. However, there are challenging issues toward the wide adoption of deep learning by the community of ecologists. First, there is a programming barrier as most algorithms are written in `Python` while most ecologists are versed in `R`. Second, recent applications of deep learning in ecology have focused on computational aspects and simple tasks without addressing the underlying ecological questions or carrying out the statistical data analysis to answer these questions. Here, we showcase a reproducible `R` workflow integrating both deep learning and statistical models using predator-prey relationships as a case study. We illustrate deep learning for the identification of animal species on images collected with camera traps, and quantify spatial co-occurrence using multispecies occupancy models. Despite average model classification performances, ecological inference was similar whether we analysed the ground truth dataset or the classified dataset. This result calls for further work on the trade-offs between time and resources allocated to train models with deep learning and our ability to properly address key ecological questions with biodiversity monitoring. We hope that our reproducible workflow will be useful to ecologists and applied statisticians.
 citation:
