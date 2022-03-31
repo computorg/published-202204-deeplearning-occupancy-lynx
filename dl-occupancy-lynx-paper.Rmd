@@ -32,7 +32,7 @@ abstract: >+
 citation:
   type: article-journal
   container-title: "Computo"
-  doi: ""
+  doi: "10.57750/yfm2-5f45"
   url: https://computo.sfds.asso.fr/published-202204-deeplearning-occupancy-lynx
 github: https://github.com/computorg/published-202204-deeplearning-occupancy-lynx
 bibliography: references.bib
