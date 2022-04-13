@@ -2,8 +2,6 @@
 title: "Trade-off between deep learning for species identification and inference about predator-prey co-occurrence"
 subtitle: "Reproducible R workflow integrating models in computer vision and ecological statistics"
 date: last-modified
-descrition: |
-  Short description of this paper
 author:
   - name: Olivier Gimenez
     url: https://oliviergimenez.github.io/
