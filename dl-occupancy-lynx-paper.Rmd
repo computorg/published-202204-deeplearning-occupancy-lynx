@@ -2,6 +2,7 @@
 title: "Trade-off between deep learning for species identification and inference about predator-prey co-occurrence"
 subtitle: "Reproducible R workflow integrating models in computer vision and ecological statistics"
 date: last-modified
+doi: "10.57750/yfm2-5f45"
 author:
   - name: Olivier Gimenez
     url: https://oliviergimenez.github.io/
@@ -32,8 +33,10 @@ citation:
   container-title: "Computo"
   doi: "10.57750/yfm2-5f45"
   url: https://computo.sfds.asso.fr/published-202204-deeplearning-occupancy-lynx
+  issn: "2824-7795"
 github: https://github.com/computorg/published-202204-deeplearning-occupancy-lynx
 bibliography: references.bib
+google-scholar: true
 repo: "published-202204-deeplearning-occupancy-lynx"
 ---
 
@@ -41,7 +44,7 @@ repo: "published-202204-deeplearning-occupancy-lynx"
 [![review 1](https://img.shields.io/badge/review-report%201-blue)](https://github.com/computorg/{{< meta repo >}}/issues/1)
 [![review 2](https://img.shields.io/badge/review-report%202-blue)](https://github.com/computorg/{{< meta repo >}}/issues/2)
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
-
+ISSN 2824-7795
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(tidy = FALSE, 
