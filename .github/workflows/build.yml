@@ -48,7 +48,7 @@ jobs:
         shell: bash -l {0}
         run: |
             wget https://raw.githubusercontent.com/computorg/template-computo-quarto/main/_quarto.yml
-            conda run -n computo quarto render ${{ env.quarto_file }}.qmd
+            conda run -n computo quarto render ${{ env.quarto_file }}.Rmd
             mkdir _build
             mv ${{ env.quarto_file }}.html _build/index.html
 
