@@ -34,6 +34,9 @@ jobs:
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1
+      - name: Install fastai
+        run: |
+           R -e "fastai::install_fastai()"
       - name: Rendering with Quarto
         shell: bash -l {0}
         run: >
