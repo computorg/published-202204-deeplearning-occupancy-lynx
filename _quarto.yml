@@ -1,0 +1,37 @@
+number-sections: true
+format:
+  html:
+    page-layout: article
+    include-in-header: includes/pseudocode-header.html
+    include-after-body: includes/pseudocode-footer.html
+    date-format: long
+    toc-title: >
+      <a href="https://computo.sfds.asso.fr"><img style="width: 96px;" alt="Computo" src="https://computo.sfds.asso.fr/assets/img/logo_text_vertical.svg"/></a> <br/><br/>
+      Contents
+    toc: true
+    theme: cosmo
+    license: "CC BY"
+    title-block-banner: "#034E79"
+    title-block-banner-color: "#FFFFFF"
+    hover-citations: true
+    hover-footnotes: true
+    highlight-style: github
+    code-block-background: true
+    code-block-border-left: "#034E79"
+    code-tools:
+      source: true
+      toggle: false
+      caption: "source"
+    code-copy: true
+    code-summary: "Show the code"
+    code-fold: true
+    anchor-sections: true
+    link-external-icon: false
+    link-external-newwindow: true
+    html-math-method: katex
+    self-contained: true
+crossref:
+  sec-prefix: Section
+  eq-prefix: Equation
+  fig-prefix: Figure   
+  tbl-prefix: Table
