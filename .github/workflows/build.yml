@@ -6,7 +6,7 @@ on:
       - main
       - dev
 env:
-  quarto_file: published-202304-gimenez-lynx
+  quarto_file: published-202204-gimenez-lynx
   GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   computorticle:
@@ -41,15 +41,10 @@ jobs:
         shell: bash -l {0}
         run: >
           quarto render ${{ env.quarto_file }}.qmd
-
           mkdir _build
-
           mv ${{ env.quarto_file }}.html _build/index.html
-
           mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/
-
           cp environment.yml _build/
-
           touch _build/.nojekyll
       - name: Deploying article on github pages
         uses: JamesIves/github-pages-deploy-action@v4
