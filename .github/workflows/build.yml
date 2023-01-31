@@ -46,9 +46,6 @@ jobs:
             mv -vf ${{ env.quarto_file }}_files img ${{ env.quarto_file }}.pdf _build/
             cp environment.yml _build/
             touch _build/.nojekyll
-  deploy:
-    if: ${"!contains(github.event.head_commit.message, 'skip build')" && github.ref == 'refs/heads/main'}
-    steps:
       - name: Deploying article on github pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
