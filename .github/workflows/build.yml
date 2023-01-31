@@ -1,57 +1,53 @@
+---
 name: build
-
 on:
   push:
     branches:
       - main
       - dev
-
-env: # Change this if needed
+env:
   quarto_file: published-202304-gimenez-lynx
   GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-  
 jobs:
   computorticle:
     if: "!contains(github.event.head_commit.message, 'skip build')"
     runs-on: ubuntu-latest
-
     steps:
       - name: Checking out repository for Github action
         uses: actions/checkout@v2
-
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           tinytex: true
-
       - name: Install Computo extension for Quarto
         run: |
-            quarto add --no-prompt computorg/computo-quarto-extension
-
+          quarto add --no-prompt computorg/computo-quarto-extension
       - name: Install system dependencies
-      	run: |
-            sudo apt-get install libcurl4-openssl-dev
-                    
+        run: |+
+          sudo apt-get install libcurl4-openssl-dev
+                   
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
         with:
-          r-version: '4.2.2'
-
+          r-version: 4.2.2
       - name: Install R Dependencies
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1
-
       - name: Rendering with Quarto
         shell: bash -l {0}
-        run: |
-            quarto render ${{ env.quarto_file }}.qmd
-            mkdir _build
-            mv ${{ env.quarto_file }}.html _build/index.html
-            mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/
-            cp environment.yml _build/
-            touch _build/.nojekyll
+        run: >
+          quarto render ${{ env.quarto_file }}.qmd
 
+          mkdir _build
+
+          mv ${{ env.quarto_file }}.html _build/index.html
+
+          mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/
+
+          cp environment.yml _build/
+
+          touch _build/.nojekyll
       - name: Deploying article on github pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
