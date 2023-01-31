@@ -38,7 +38,7 @@ jobs:
         with:
           cache-version: 1
 
-     - name: Rendering with Quarto
+      - name: Rendering with Quarto
         shell: bash -l {0}
         run: |
             quarto render ${{ env.quarto_file }}.qmd
