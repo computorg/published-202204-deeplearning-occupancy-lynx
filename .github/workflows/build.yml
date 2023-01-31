@@ -9,7 +9,7 @@ env:
   quarto_file: published-202204-gimenez-lynx
   GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 jobs:
-  computorticle:
+  build:
     if: "!contains(github.event.head_commit.message, 'skip build')"
     runs-on: ubuntu-latest
     steps:
@@ -39,17 +39,19 @@ jobs:
            R -e "fastai::install_fastai()"
       - name: Rendering with Quarto
         shell: bash -l {0}
-        run: >
-          quarto render ${{ env.quarto_file }}.qmd
-          mkdir _build
-          mv ${{ env.quarto_file }}.html _build/index.html
-          mv -vf ${{ env.quarto_file }}_files figures ${{ env.quarto_file }}.pdf _build/
-          cp environment.yml _build/
-          touch _build/.nojekyll
+        run: |
+            quarto render ${{ env.quarto_file }}.qmd
+            mkdir _build
+            mv ${{ env.quarto_file }}.html _build/index.html
+            mv -vf ${{ env.quarto_file }}_files img ${{ env.quarto_file }}.pdf _build/
+            cp environment.yml _build/
+            touch _build/.nojekyll
+  deploy:
+    if: ${"!contains(github.event.head_commit.message, 'skip build')" && github.ref == 'refs/heads/main'}
+    steps:
       - name: Deploying article on github pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           BRANCH: gh-pages
           FOLDER: _build
           CLEAN: true
-
