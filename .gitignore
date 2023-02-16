@@ -11,3 +11,4 @@ published-202301-gimenez-lynx_files/*
 published-202301-gimenez-lynx_files/*/
 /.quarto/
 
+.Rproj.user
