@@ -395,7 +395,7 @@ ISSN 2824-7795</p>
   </ul></li>
   <li><a href="#session-information" id="toc-session-information" class="nav-link" data-scroll-target="#session-information">Session information</a></li>
   <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="published-202204-gimenez-lynx.pdf"><i class="bi bi-file-pdf"></i>PDF (computo)</a></li></ul></div></nav>
 </div>
@@ -1169,7 +1169,7 @@ Epoch   1/2          :            |------------|   70.00%       [7/10
 Epoch   1/2          :            |--------|   80.00%       [8/10 
 Epoch   1/2          :            |----|     90.00%       [9/10 
 Epoch   1/2          :            ||         100.00%      [10/10 
-0       2.459393     0.927972     0.729167   0.270833     00:53 
+0       2.625426     0.868738     0.718750   0.281250     00:53 
 Epoch   2/2          :            |----------------------------------------|   0.00%        [0/36 
 Epoch   2/2          :            |---------------------------------------|   2.78%        [1/36 
 Epoch   2/2          :            |--------------------------------------|   5.56%        [2/36 
@@ -1218,16 +1218,16 @@ Epoch   2/2          :            |------------|   70.00%       [7/10
 Epoch   2/2          :            |--------|   80.00%       [8/10 
 Epoch   2/2          :            |----|     90.00%       [9/10 
 Epoch   2/2          :            ||         100.00%      [10/10 
-1       1.740960     0.807088     0.760417   0.239583     00:52 </code></pre>
+1       1.787133     0.778699     0.750000   0.250000     00:53 </code></pre>
 </div>
 <details open="">
 <summary>Hide/Show the code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>one_cycle</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>  epoch train_loss valid_loss  accuracy error_rate
-1     0   2.459393  0.9279718 0.7291667  0.2708333
-2     1   1.740960  0.8070876 0.7604167  0.2395833</code></pre>
+<pre><code>  epoch train_loss valid_loss accuracy error_rate
+1     0   2.625426  0.8687379  0.71875    0.28125
+2     1   1.787133  0.7786992  0.75000    0.25000</code></pre>
 </div>
 </div>
 <p>We may dig a bit deeper in training performances by loading the best model, here <code>model_1.pth</code>, and display some metrics for each species.</p>
@@ -1350,23 +1350,23 @@ Epoch   2/2          :            ||         100.00%      [10/10
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          V1        V2 V3
-1   chasseur    humain  4
-2       chat    renard  2
-3      chien sangliers  2
-4     humain  vehicule  2
-5  blaireaux    renard  1
+1     humain  vehicule  4
+2   chasseur    humain  2
+3  chevreuil     chien  2
+4      chien sangliers  2
+5     humain  chasseur  2
 6    chamois chevreuil  1
-7    chamois sangliers  1
-8  chevreuil     chien  1
-9  chevreuil    renard  1
-10    humain    renard  1
-11    humain sangliers  1
-12    lievre    renard  1
-13    renard    lievre  1
-14    renard sangliers  1
-15 sangliers    renard  1
-16  vehicule    humain  1
-17  vehicule sangliers  1</code></pre>
+7    chamois     chien  1
+8    chamois    renard  1
+9       chat    renard  1
+10 chevreuil    renard  1
+11     chien  chasseur  1
+12    humain    lievre  1
+13    lievre    renard  1
+14      lynx    renard  1
+15    renard    humain  1
+16    renard sangliers  1
+17  vehicule    humain  1</code></pre>
 </div>
 </div>
 </section>
@@ -1416,11 +1416,11 @@ Epoch   2/2          :            ||         100.00%      [10/10
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">lynx</td>
-<td style="text-align: left;">chamois</td>
+<td style="text-align: left;">renard</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">roe deer</td>
-<td style="text-align: left;">lynx</td>
+<td style="text-align: left;">chevreuil</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">wild boar</td>
@@ -1437,85 +1437,9 @@ Epoch   2/2          :            ||         100.00%      [10/10
 </section>
 
 
-<section id="bibliography" class="level1 unnumbered">
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section id="session-information" class="level1 appendix unnumbered"><h2 class="quarto-appendix-heading">Session information</h2><div class="quarto-appendix-contents">
-
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>R version 4.2.2 (2022-10-31)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.1 LTS
-
-Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3
-LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so
-
-locale:
- [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
- [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
- [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
-[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
-
-attached base packages:
-[1] stats     graphics  grDevices datasets  utils     methods   base     
-
-other attached packages:
- [1] reticulate_1.28   exifr_0.3.2       unmarked_1.2.5    cvms_1.3.9       
- [5] janitor_2.1.0     highcharter_0.9.4 fastai_2.2.0      ggtext_0.1.2     
- [9] wesanderson_0.3.6 kableExtra_1.3.4  stringi_1.7.12    lubridate_1.9.0  
-[13] timechange_0.2.0  cowplot_1.1.1     sf_1.0-9          forcats_0.5.2    
-[17] stringr_1.5.0     dplyr_1.1.0       purrr_1.0.1       readr_2.1.3      
-[21] tidyr_1.3.0       tibble_3.1.8      ggplot2_3.4.0     tidyverse_1.3.2  
-
-loaded via a namespace (and not attached):
-  [1] minqa_1.2.5         googledrive_2.0.0   colorspace_2.1-0   
-  [4] ggsignif_0.6.4      ellipsis_0.3.2      class_7.3-21       
-  [7] snakecase_0.11.0    markdown_1.4        fs_1.6.0           
- [10] gridtext_0.1.5      rstudioapi_0.14     proxy_0.4-27       
- [13] ggpubr_0.5.0        farver_2.1.1        bit64_4.0.5        
- [16] fansi_1.0.4         xml2_1.3.3          splines_4.2.2      
- [19] knitr_1.41          rlist_0.4.6.2       jsonlite_1.8.4     
- [22] nloptr_2.0.3        broom_1.0.3         dbplyr_2.3.0       
- [25] png_0.1-8           compiler_4.2.2      httr_1.4.4         
- [28] backports_1.4.1     assertthat_0.2.1    Matrix_1.5-3       
- [31] fastmap_1.1.0       gargle_1.2.1        cli_3.6.0          
- [34] htmltools_0.5.4     tools_4.2.2         igraph_1.3.5       
- [37] gtable_0.3.1        glue_1.6.2          rappdirs_0.3.3     
- [40] Rcpp_1.0.10         carData_3.0-5       cellranger_1.1.0   
- [43] vctrs_0.5.2         nlme_3.1-161        svglite_2.1.1      
- [46] xfun_0.36           lme4_1.1-31         rvest_1.0.3        
- [49] lifecycle_1.0.3     renv_0.16.0         rstatix_0.7.1      
- [52] googlesheets4_1.0.1 MASS_7.3-58.2       zoo_1.8-11         
- [55] scales_1.2.1        vroom_1.6.0         hms_1.1.2          
- [58] parallel_4.2.2      RColorBrewer_1.1-3  yaml_2.3.6         
- [61] quantmod_0.4.20     curl_5.0.0          pbapply_1.7-0      
- [64] highr_0.10          e1071_1.7-12        checkmate_2.1.0    
- [67] TTR_0.24.3          boot_1.3-28.1       commonmark_1.8.1   
- [70] rlang_1.0.6         pkgconfig_2.0.3     systemfonts_1.0.4  
- [73] evaluate_0.20       lattice_0.20-45     labeling_0.4.2     
- [76] htmlwidgets_1.6.1   bit_4.0.5           tidyselect_1.2.0   
- [79] plyr_1.8.8          magrittr_2.0.3      R6_2.5.1           
- [82] generics_0.1.3      DBI_1.1.3           pillar_1.8.1       
- [85] haven_2.5.1         withr_2.5.0         units_0.8-1        
- [88] xts_0.12.2          abind_1.4-5         car_3.1-1          
- [91] modelr_0.1.10       crayon_1.5.2        KernSmooth_2.23-20 
- [94] utf8_1.2.2          tzdb_0.3.0          rmarkdown_2.19     
- [97] jpeg_0.1-10         grid_4.2.2          readxl_1.4.1       
-[100] data.table_1.14.6   reprex_2.0.2        digest_0.6.31      
-[103] classInt_0.4-8      webshot_0.5.4       munsell_0.5.0      
-[106] viridisLite_0.4.1  </code></pre>
-</div>
-</div>
-</div></section><section id="acknowledgments" class="level1 appendix unnumbered"><h2 class="quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
-
-<p>We warmly thank Mathieu Massaviol, Remy Dernat and Khalid Belkhir for their help in using GPU machines on the Montpellier Bioinformatics Biodiversity platform, Julien Renoult for helpful discussions, Delphine Dinouart and Chloé Quillard for their precious help in manually tagging the images, and Vincent Miele for having inspired this work, and his help and support along the way. We also thank the staff of the Federations of Hunters from the Jura and Ain counties, hunters who helped to find locations for camera traps and volunteers who contributed in collecting data. Our thanks also go to Hannah Clipp, Chris Rota and Ken Kellner for sharing a development version of unmarked, and an unpublished version of their paper. The Lynx Predator Prey Program was funded by Auvergne-Rhône-Alpes Region, Ain and Jura departmental Councils, The French National Federation of Hunters, French Environmental Ministry based in Auvergne-Rhone-Alpes and Bourgogne Franche-Comté Region and the French Office for Biodiversity. Our work was also partly funded by the French National Research Agency (grant ANR-16-CE02-0007).</p>
-<!-- -->
-
-</div></section><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliography</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-reticulate_ref" class="csl-entry" role="doc-biblioentry">
 Allaire, JJ, Kevin Ushey, Yuan Tang, and Dirk Eddelbuettel. 2017. <em>Reticulate: R Interface to Python</em>. <a href="https://github.com/rstudio/reticulate">https://github.com/rstudio/reticulate</a>.
 </div>
@@ -1624,6 +1548,82 @@ Yosinski, Jason, Jeff Clune, Yoshua Bengio, and Hod Lipson. 2014. <span>“How T
 <div id="ref-zimmermann_optimizing_2013" class="csl-entry" role="doc-biblioentry">
 Zimmermann, Fridolin, Christine Breitenmoser-Würsten, Anja Molinari-Jobin, and Urs Breitenmoser. 2013. <span>“Optimizing the Size of the Area Surveyed for Monitoring a <span>Eurasian</span> Lynx (<span>Lynx</span> Lynx) Population in the <span>Swiss</span> <span>Alps</span> by Means of Photographic Capture-Recapture.”</span> <em>Integrative Zoology</em> 8 (3): 232–43. <a href="https://doi.org/10.1111/1749-4877.12017">https://doi.org/10.1111/1749-4877.12017</a>.
 </div>
+</div>
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section id="session-information" class="level1 appendix unnumbered"><h2 class="quarto-appendix-heading">Session information</h2><div class="quarto-appendix-contents">
+
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>R version 4.2.2 (2022-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.1 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+attached base packages:
+[1] stats     graphics  grDevices datasets  utils     methods   base     
+
+other attached packages:
+ [1] reticulate_1.28   exifr_0.3.2       unmarked_1.2.5    cvms_1.3.9       
+ [5] janitor_2.1.0     highcharter_0.9.4 fastai_2.2.0      ggtext_0.1.2     
+ [9] wesanderson_0.3.6 kableExtra_1.3.4  stringi_1.7.12    lubridate_1.9.0  
+[13] timechange_0.2.0  cowplot_1.1.1     sf_1.0-9          forcats_0.5.2    
+[17] stringr_1.5.0     dplyr_1.1.0       purrr_1.0.1       readr_2.1.3      
+[21] tidyr_1.3.0       tibble_3.1.8      ggplot2_3.4.0     tidyverse_1.3.2  
+
+loaded via a namespace (and not attached):
+  [1] minqa_1.2.5         googledrive_2.0.0   colorspace_2.1-0   
+  [4] ggsignif_0.6.4      ellipsis_0.3.2      class_7.3-21       
+  [7] snakecase_0.11.0    markdown_1.4        fs_1.6.0           
+ [10] gridtext_0.1.5      rstudioapi_0.14     proxy_0.4-27       
+ [13] ggpubr_0.5.0        farver_2.1.1        bit64_4.0.5        
+ [16] fansi_1.0.4         xml2_1.3.3          splines_4.2.2      
+ [19] knitr_1.41          rlist_0.4.6.2       jsonlite_1.8.4     
+ [22] nloptr_2.0.3        broom_1.0.3         dbplyr_2.3.0       
+ [25] png_0.1-8           compiler_4.2.2      httr_1.4.4         
+ [28] backports_1.4.1     assertthat_0.2.1    Matrix_1.5-3       
+ [31] fastmap_1.1.0       gargle_1.2.1        cli_3.6.0          
+ [34] htmltools_0.5.4     tools_4.2.2         igraph_1.3.5       
+ [37] gtable_0.3.1        glue_1.6.2          rappdirs_0.3.3     
+ [40] Rcpp_1.0.10         carData_3.0-5       cellranger_1.1.0   
+ [43] vctrs_0.5.2         nlme_3.1-161        svglite_2.1.1      
+ [46] xfun_0.36           lme4_1.1-31         rvest_1.0.3        
+ [49] lifecycle_1.0.3     renv_0.16.0         rstatix_0.7.1      
+ [52] googlesheets4_1.0.1 MASS_7.3-58.2       zoo_1.8-11         
+ [55] scales_1.2.1        vroom_1.6.0         hms_1.1.2          
+ [58] parallel_4.2.2      RColorBrewer_1.1-3  yaml_2.3.6         
+ [61] quantmod_0.4.20     curl_5.0.0          pbapply_1.7-0      
+ [64] highr_0.10          e1071_1.7-12        checkmate_2.1.0    
+ [67] TTR_0.24.3          boot_1.3-28.1       commonmark_1.8.1   
+ [70] rlang_1.0.6         pkgconfig_2.0.3     systemfonts_1.0.4  
+ [73] evaluate_0.20       lattice_0.20-45     labeling_0.4.2     
+ [76] htmlwidgets_1.6.1   bit_4.0.5           tidyselect_1.2.0   
+ [79] plyr_1.8.8          magrittr_2.0.3      R6_2.5.1           
+ [82] generics_0.1.3      DBI_1.1.3           pillar_1.8.1       
+ [85] haven_2.5.1         withr_2.5.0         units_0.8-1        
+ [88] xts_0.12.2          abind_1.4-5         car_3.1-1          
+ [91] modelr_0.1.10       crayon_1.5.2        KernSmooth_2.23-20 
+ [94] utf8_1.2.2          tzdb_0.3.0          rmarkdown_2.19     
+ [97] jpeg_0.1-10         grid_4.2.2          readxl_1.4.1       
+[100] data.table_1.14.6   reprex_2.0.2        digest_0.6.31      
+[103] classInt_0.4-8      webshot_0.5.4       munsell_0.5.0      
+[106] viridisLite_0.4.1  </code></pre>
+</div>
+</div>
+</div></section><section id="acknowledgments" class="level1 appendix unnumbered"><h2 class="quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
+
+<p>We warmly thank Mathieu Massaviol, Remy Dernat and Khalid Belkhir for their help in using GPU machines on the Montpellier Bioinformatics Biodiversity platform, Julien Renoult for helpful discussions, Delphine Dinouart and Chloé Quillard for their precious help in manually tagging the images, and Vincent Miele for having inspired this work, and his help and support along the way. We also thank the staff of the Federations of Hunters from the Jura and Ain counties, hunters who helped to find locations for camera traps and volunteers who contributed in collecting data. Our thanks also go to Hannah Clipp, Chris Rota and Ken Kellner for sharing a development version of unmarked, and an unpublished version of their paper. The Lynx Predator Prey Program was funded by Auvergne-Rhône-Alpes Region, Ain and Jura departmental Councils, The French National Federation of Hunters, French Environmental Ministry based in Auvergne-Rhone-Alpes and Bourgogne Franche-Comté Region and the French Office for Biodiversity. Our work was also partly funded by the French National Research Agency (grant ANR-16-CE02-0007).</p>
 </div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{gimenez2022,
   author = {Olivier Gimenez and Maëlis Kervellec and Jean-Baptiste
     Fanjul and Anna Chaine and Lucile Marescot and Yoann Bollet and
@@ -3150,6 +3150,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb19-1195"><a href="#cb19-1195" aria-hidden="true" tabindex="-1"></a><span class="fu"># Acknowledgments {.appendix .unnumbered}</span></span>
 <span id="cb19-1196"><a href="#cb19-1196" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-1197"><a href="#cb19-1197" aria-hidden="true" tabindex="-1"></a>We warmly thank Mathieu Massaviol, Remy Dernat and Khalid Belkhir for their help in using GPU machines on the Montpellier Bioinformatics Biodiversity platform, Julien Renoult for helpful discussions, Delphine Dinouart and Chloé Quillard for their precious help in manually tagging the images, and Vincent Miele for having inspired this work, and his help and support along the way. We also thank the staff of the Federations of Hunters from the Jura and Ain counties, hunters who helped to find locations for camera traps and volunteers who contributed in collecting data. Our thanks also go to Hannah Clipp, Chris Rota and Ken Kellner for sharing a development version of unmarked, and an unpublished version of their paper. The Lynx Predator Prey Program was funded by Auvergne-Rhône-Alpes Region, Ain and Jura departmental Councils, The French National Federation of Hunters, French Environmental Ministry based in Auvergne-Rhone-Alpes and Bourgogne Franche-Comté Region and the French Office for Biodiversity. Our work was also partly funded by the French National Research Agency (grant ANR-16-CE02-0007). </span>
+<span id="cb19-1198"><a href="#cb19-1198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-1199"><a href="#cb19-1199" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
+<span id="cb19-1200"><a href="#cb19-1200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-1201"><a href="#cb19-1201" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb19-1202"><a href="#cb19-1202" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
