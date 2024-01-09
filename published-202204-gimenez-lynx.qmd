@@ -32,10 +32,11 @@ keywords: [computer-vision, deep-learning, species-distribution-modeling, ecolog
 citation:
   type: article-journal
   container-title: "Computo"
-  publisher: "Société Française de Statistique"
   doi: "10.57750/yfm2-5f45"
-  url: https://computo.sfds.asso.fr/published-202204-deeplearning-occupancy-lynx
+  publisher: "French Statistical Society"
   issn: "2824-7795"
+  pdf-url: "https://computo.sfds.asso.fr/published-202204-deeplearning-occupancy-lynx/published-202204-gimenez-lynx.pdf"
+  url:  "https://computo.sfds.asso.fr/published-202204-deeplearning-occupancy-lynx/"
 bibliography: references.bib
 google-scholar: true
 github-user: computorg
