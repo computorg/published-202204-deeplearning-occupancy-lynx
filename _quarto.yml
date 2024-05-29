@@ -1,2 +1,4 @@
 project:
   title: "published-202204-gimenez-lynx"
+  render:
+    - published-202204-gimenez-lynx.qmd
