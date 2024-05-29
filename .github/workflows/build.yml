@@ -1,28 +1,35 @@
----
 name: build
+
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - main
-      - dev
-env:
-  quarto_file: published-202204-gimenez-lynx
-  GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    branches: main
+
 jobs:
-  build:
-    if: "!contains(github.event.head_commit.message, 'skip build')"
+  build-and-publish:    
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checking out repository for Github action
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        
       - name: Installing quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           tinytex: true
-          version: pre-release
+
       - name: Install Computo extension for Quarto
         run: |
           quarto add --no-prompt computorg/computo-quarto-extension
+
+      - name: register tinytex globally for diagram.lua
+        run: |
+          mkdir -p ~/.local/bin
+          ~/.TinyTeX/bin/x86_64-linux/tlmgr option sys_bin ~/.local/bin
+          ~/.TinyTeX/bin/x86_64-linux/tlmgr path add
+          ~/.TinyTeX/bin/x86_64-linux/tlmgr install libertinus-fonts
+          
       - name: Install system dependencies
         run: |+
           sudo apt-get install libcurl4-openssl-dev libudunits2-dev libgdal-dev
@@ -31,25 +38,19 @@ jobs:
         uses: r-lib/actions/setup-r@v2
         with:
           r-version: 4.2.2
+          
       - name: Install R Dependencies
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1
+          
       - name: Install fastai
         run: |
            R -e "fastai::install_fastai()"
-      - name: Rendering with Quarto
-        shell: bash -l {0}
-        run: |
-            quarto render ${{ env.quarto_file }}.qmd
-            mkdir _build
-            mv ${{ env.quarto_file }}.html _build/index.html
-            mv -vf ${{ env.quarto_file }}_files img ${{ env.quarto_file }}.pdf _build/
-            cp environment.yml _build/
-            touch _build/.nojekyll
-      - name: Deploying article on github pages
-        uses: JamesIves/github-pages-deploy-action@v4
+           
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
         with:
-          BRANCH: gh-pages
-          FOLDER: _build
-          CLEAN: true
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
