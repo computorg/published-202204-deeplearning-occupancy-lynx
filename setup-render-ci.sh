@@ -1,1 +1,1 @@
-sudo apt install -y libssl-dev libabsl-dev libudunits2-dev libgdal-dev libgeos-dev libproj-dev libsqlite3-dev
+sudo apt install -y libssl-dev libabsl-dev libudunits2-dev libgdal-dev libgeos-dev libproj-dev libsqlite3-dev libglpk40
