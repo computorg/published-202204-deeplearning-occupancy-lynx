@@ -2,6 +2,15 @@
 
 *A Reproducible `R` workflow integrating models in computer vision and ecological statistic*
 
+[![build and publish](https://github.com/computorg/published-202204-deeplearning-occupancy-lynx/actions/workflows/build.yml/badge.svg)](https://github.com/computorg/published-202204-deeplearning-occupancy-lynx/actions/workflows/build.yml)
+[![DOI:10.57750/yfm2-5f45 ](https://img.shields.io/badge/DOI-10.57750%2Fyfm2--5f45-034E79.svg)](https://doi.org/10.57750/yfm2-5f45)
+[![review](https://img.shields.io/badge/review-report-blue)](https://github.com/computorg/published-202204-deeplearning-occupancy-lynx/issues?q=is%3Aopen+is%3Aissue+label%3Areview)
+[![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/computorg/published-202204-deeplearning-occupancy-lynx/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/computorg/published-202204-deeplearning-occupancy-lynx)
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
+ISSN 2824-7795
+
+Authors:
+
 - [Olivier Gimenez](https://oliviergimenez.github.io/) (CEFE, Univ Montpellier, CNRS, EPHE, IRD, Montpellier, France)
 - Maëlis Kervellec (CEFE, Univ Montpellier, CNRS, EPHE, IRD, Montpellier, France)
 - Jean-Baptiste Fanjul (Fédérations Départementales des Chasseurs du Jura, Arlay, France)
@@ -10,13 +19,3 @@
 - Yoann Bollet (Fédération Départementale des Chasseurs de l’Ain, Bourg-en-Bresse, France)
 - Christophe Duchamp (Office Français de la Biodiversité, Unité Espèces à enjeux, Gap, France)
 
-[![build status](https://github.com/computorg/published-202204-deeplearning-occupancy-lynx/workflows/build/badge.svg)](https://github.com/computorg/published-202204-deeplearning-occupancy-lynx/)
-[![](https://img.shields.io/github/last-commit/computorg/published-202204-deeplearning-occupancy-lynx.svg)](https://github.com/computorg/published-202204-deeplearning-occupancy-lynx/commits/main)
-[![HTML](https://img.shields.io/badge/article-HTML-034E79)](https://computorg.github.io/published-202204-deeplearning-occupancy-lynx/)
-<!-- [![PDF](https://img.shields.io/badge/article-PDF-034E79)](https://computorg.github.io/published-202204-deeplearning-occupancy-lynx/published-202204-gimenez-lynx.pdf) -->
-[![DOI:10.57750/yfm2-5f45 ](https://img.shields.io/badge/DOI-10.57750%2Fyfm2--5f45-034E79.svg)](https://doi.org/10.57750/yfm2-5f45)
-[![review 1](https://img.shields.io/badge/review-report%201-blue)](https://github.com/computorg/published-202204-deeplearning-occupancy-lynx/issues/1)
-[![review 2](https://img.shields.io/badge/review-report%202-blue)](https://github.com/computorg/published-202204-deeplearning-occupancy-lynx/issues/2)
-[![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/computorg/published-202204-deeplearning-occupancy-lynx/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/computorg/published-202204-deeplearning-occupancy-lynx)
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
-ISSN 2824-7795

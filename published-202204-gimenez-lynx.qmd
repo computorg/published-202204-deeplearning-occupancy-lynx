@@ -35,8 +35,6 @@ citation:
   doi: "10.57750/yfm2-5f45"
   publisher: "French Statistical Society"
   issn: "2824-7795"
-  pdf-url: "https://computo.sfds.asso.fr/published-202204-deeplearning-occupancy-lynx/published-202204-gimenez-lynx.pdf"
-  url:  "https://computo.sfds.asso.fr/published-202204-deeplearning-occupancy-lynx/"
 bibliography: references.bib
 google-scholar: true
 github-user: computorg
@@ -700,7 +698,7 @@ fit <- occuMulti(detformulas = detFormulas,
                  stateformulas = occFormulas, 
                  data = data,
                  control = list(maxit = 5000),
-                 penalty = optimal_penalty@call$penalty) 
+                 penalty = 1.28) 
 
 # Get natural parameter and detection estimates
 mle <- fit@opt$par
@@ -797,7 +795,7 @@ fit <- occuMulti(detformulas = detFormulas,
                  stateformulas = occFormulas, 
                  data = data,
                  control = list(maxit = 5000),
-                 penalty = optimal_penalty@call$penalty) 
+                 penalty = 0.08) 
 
 # Get natural parameter and detection estimates
 mle <- fit@opt$par
