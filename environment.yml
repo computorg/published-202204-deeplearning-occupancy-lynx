@@ -1,0 +1,22 @@
+name: deep
+channels:
+  - conda-forge
+  - fastai
+dependencies:
+  - jupyter
+  - jupyter-cache
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - seaborn
+  - scikit-learn
+  - tqdm
+  - ipython
+  - fastai
+  - pip:
+    - torch
+    - torchvision
+    - torchmetrics
+
+
