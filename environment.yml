@@ -1,22 +1,14 @@
-name: deep
+name: gimenez
 channels:
-  - conda-forge
   - fastai
+  - conda-forge
 dependencies:
   - jupyter
-  - jupyter-cache
-  - numpy
-  - scipy
-  - matplotlib
-  - pandas
-  - seaborn
-  - scikit-learn
-  - tqdm
-  - ipython
+  - jupyter-cache  
   - fastai
-  - pip:
-    - torch
-    - torchvision
-    - torchmetrics
-
-
+  - ipython
+  - pydicom
+  - kornia
+  - cv2
+  - skimage
+  - ohmeow-blurr
