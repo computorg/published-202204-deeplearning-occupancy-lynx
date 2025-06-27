@@ -6,9 +6,4 @@ dependencies:
   - jupyter
   - jupyter-cache  
   - fastai
-  - ipython
-  - pydicom
-  - kornia
-  - cv2
-  - skimage
-  - ohmeow-blurr
+

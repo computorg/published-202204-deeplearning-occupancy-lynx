@@ -1103,7 +1103,7 @@ We proceed with transfer learning using images from the Jura county (or a subsam
 
 ```{r echo = TRUE}
 library(reticulate)
-#reticulate::use_condaenv("computo")
+#reticulate::use_condaenv("gimenez")
 library(fastai)
 dls <- ImageDataLoaders_from_folder(
   path = "pix/",
