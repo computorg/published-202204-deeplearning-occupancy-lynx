@@ -6,6 +6,4 @@ dependencies:
   - jupyter
   - jupyter-cache  
   - fastai
-  - openssl
-  - certifi
 

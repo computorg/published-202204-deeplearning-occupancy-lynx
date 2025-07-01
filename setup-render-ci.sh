@@ -1,10 +1,9 @@
 sudo apt-get update
 sudo apt-get install -y \
     ca-certificates \
-    openssl \
     libssl-dev \
-    libcurl4-openssl-dev \
     curl \
+    libcurl4-openssl-dev \
     wget \
     libabsl-dev \
     libudunits2-dev \
@@ -13,8 +12,4 @@ sudo apt-get install -y \
     libproj-dev \
     libsqlite3-dev \
     libglpk40
-
-
-
-
-
+sudo update-ca-certificates --fresh
