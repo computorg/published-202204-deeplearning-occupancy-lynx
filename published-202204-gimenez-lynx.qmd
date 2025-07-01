@@ -35,8 +35,6 @@ citation:
   doi: "10.57750/yfm2-5f45"
   publisher: "French Statistical Society"
   issn: "2824-7795"
-  pdf-url: "https://computo.sfds.asso.fr/published-202204-deeplearning-occupancy-lynx/published-202204-gimenez-lynx.pdf"
-  url:  "https://computo.sfds.asso.fr/published-202204-deeplearning-occupancy-lynx/"
 bibliography: references.bib
 google-scholar: true
 github-user: computorg
@@ -700,7 +698,7 @@ fit <- occuMulti(detformulas = detFormulas,
                  stateformulas = occFormulas, 
                  data = data,
                  control = list(maxit = 5000),
-                 penalty = optimal_penalty@call$penalty) 
+                 penalty = 1.28) 
 
 # Get natural parameter and detection estimates
 mle <- fit@opt$par
@@ -797,7 +795,7 @@ fit <- occuMulti(detformulas = detFormulas,
                  stateformulas = occFormulas, 
                  data = data,
                  control = list(maxit = 5000),
-                 penalty = optimal_penalty@call$penalty) 
+                 penalty = 0.08) 
 
 # Get natural parameter and detection estimates
 mle <- fit@opt$par
@@ -1101,11 +1099,11 @@ bind_rows("training" = pix_train, "validation" = pix_valid, .id = "dataset") %>%
 
 ## Transfer learning
 
-We proceed with transfer learning using images from the Jura county (or a subsample more exactly). We first load images and apply standard transformations to improve training (flip, rotate, zoom, rotate, ligth transform).
+We proceed with transfer learning using images from the Jura county (or a subsample more exactly). We first load images and apply standard transformations to improve training (flip, rotate, zoom, rotate, light transform).
 
 ```{r echo = TRUE}
 library(reticulate)
-#reticulate::use_condaenv("computo")
+#reticulate::use_condaenv("gimenez")
 library(fastai)
 dls <- ImageDataLoaders_from_folder(
   path = "pix/",
@@ -1122,9 +1120,21 @@ dls <- ImageDataLoaders_from_folder(
 
 Then we get the model architecture. For the sake of illustration, we use a resnet18 here, but we used a resnet50 to get the full results presented in the main text.
 
+```{bash, echo=FALSE}
+FILE=~/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+if test -f "$FILE"; then
+    echo "$FILE exists."
+else
+  mkdir -p ~/.cache/torch/hub/checkpoints
+  wget -c https://download.pytorch.org/models/resnet18-f37072fd.pth
+  mv resnet18-f37072fd.pth ~/.cache/torch/hub/checkpoints/
+fi
+```
+
 ```{r echo = TRUE}
 learn <- cnn_learner(dls = dls,
                      arch = resnet18(),
+                     path = ".",
                      metrics = list(accuracy, error_rate))
 ```
 
