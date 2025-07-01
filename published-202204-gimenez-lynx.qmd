@@ -1120,12 +1120,16 @@ dls <- ImageDataLoaders_from_folder(
 
 Then we get the model architecture. For the sake of illustration, we use a resnet18 here, but we used a resnet50 to get the full results presented in the main text.
 
-<!-- ```{python, echo=FALSE}
-## Fix ssl download error
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
-``` -->
-
+```{bash, echo=FALSE}
+FILE=~/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+if test -f "$FILE"; then
+    echo "$FILE exists."
+else
+  mkdir -p ~/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+  wget -c https://download.pytorch.org/models/resnet18-f37072fd.pth
+  mv resnet18-f37072fd.pth ~/.cache/torch/hub/checkpoints/
+fi
+```
 
 ```{r echo = TRUE}
 learn <- cnn_learner(dls = dls,
