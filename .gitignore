@@ -18,13 +18,14 @@ DS_Store
 /_freeze
 _extensions/
 
-published-202304-gimenez-lynx.html
-published-202304-gimenez-lynx.pdf
-published-202304-gimenez-lynx.ipynb
-published-202304-gimenez-lynx.tex
+published-202204-gimenez-lynx.html
+published-202204-gimenez-lynx.pdf
+published-202204-gimenez-lynx.ipynb
+published-202204-gimenez-lynx.tex
 
 _environment
 /.micromamba/
 _site/
 logo_notext_white.png
+logo_text_white.pdf
 /renv/

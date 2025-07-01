@@ -1120,9 +1120,17 @@ dls <- ImageDataLoaders_from_folder(
 
 Then we get the model architecture. For the sake of illustration, we use a resnet18 here, but we used a resnet50 to get the full results presented in the main text.
 
+```{python, echo=FALSE}
+## Fix ssl download error
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+```
+
+
 ```{r echo = TRUE}
 learn <- cnn_learner(dls = dls,
                      arch = resnet18(),
+                     path = ".",
                      metrics = list(accuracy, error_rate))
 ```
 
