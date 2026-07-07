@@ -10,9 +10,11 @@ date: 2022-04-22
 author:
   - name: Olivier Gimenez
     url: https://oliviergimenez.github.io/
+    orcid: 0000-0001-7001-5142
     affiliation: CEFE, Univ Montpellier, CNRS, EPHE, IRD, Montpellier, France
     affiliation-url: https://www.cefe.cnrs.fr/
   - name: Maëlis Kervellec
+    orcid: 0009-0007-5620-7122
     affiliation: CEFE, Univ Montpellier, CNRS, EPHE, IRD, Montpellier, France
     affiliation-url: https://www.cefe.cnrs.fr/
   - name: Jean-Baptiste Fanjul
@@ -22,6 +24,7 @@ author:
     affiliation: CEFE, Univ Montpellier, CNRS, EPHE, IRD, Montpellier, France
     affiliation-url: https://www.cefe.cnrs.fr/
   - name: Lucile Marescot
+    orcid: 0000-0001-7625-5446
     affiliation: CBGP, Univ Montpellier, CIRAD, INRAE, Institut Agro, IRD, Montpellier, France
     affiliation-url: https://www6.montpellier.inrae.fr/cbgp
   - name: Yoann Bollet
@@ -39,5 +42,9 @@ citation:
   publisher: "French Statistical Society"
   issn: "2824-7795"
   url: "https://computo-journal.org/published-202204-deeplearning-occupancy-lynx/"
+related-identifiers:
+  - relation: IsVersionOf
+    type: arXiv
+    identifier: "2108.11509"
 github-user: computorg
 repo: "published-202204-deeplearning-occupancy-lynx"
