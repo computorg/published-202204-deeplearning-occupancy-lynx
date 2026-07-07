@@ -1,20 +1,24 @@
 ---
 format: gfm-commonmark
+default-image-extension: ""
 ---
 
-_{{< meta description >}}_
+### Citation
+
+{{< cite-as >}}
+
+### Badges
 
 [![build and publish](https://github.com/{{< meta github-user >}}/{{< meta repo >}}/actions/workflows/build.yml/badge.svg)](https://github.com/{{< meta github-user >}}/{{< meta repo >}}/actions/workflows/build.yml)
+[![reviews](https://img.shields.io/badge/review-report-blue)](https://github.com/{{< meta github-user >}}/{{< meta repo >}}/issues?q=is%3Aopen+is%3Aissue+label%3Areview)
+[![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/{{< meta github-user >}}/{{< meta repo >}})](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/{{< meta github-user >}}/{{< meta repo >}})
 [![DOI:{{< meta citation.doi >}}](https://img.shields.io/badge/DOI-{{< shields-encode citation.doi >}}-034E79.svg)](https://doi.org/{{< meta citation.doi >}})
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
 
-<!-- [![reviews](https://img.shields.io/badge/review-report-blue)](https://github.com/{{< meta github-user >}}/{{< meta repo >}}/issues?q=is%3Aopen+is%3Aissue+label%3Areview) -->
-
-### Authors
+### Authors' affiliations
 
 {{< author-list >}}
 
 ### Abstract
 
 {{< meta abstract >}}
-
