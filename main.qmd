@@ -49,8 +49,15 @@ format:
 ```{r setup-python-env, include=FALSE}
 # reticulate provisions an isolated Python environment (via uv) the first
 # time Python is actually used, no separate conda/virtualenv setup required.
+# CI runners have no GPU, so pull CPU-only torch/torchvision wheels: the
+# default PyPI builds drag in ~2.5GB of CUDA/cuDNN dependencies that are
+# both unnecessary and a frequent source of CI flakiness (downloads/disk).
 library(reticulate)
-py_require(packages = "fastai==2.7.17", python_version = "3.10")
+Sys.setenv(UV_EXTRA_INDEX_URL = "https://download.pytorch.org/whl/cpu")
+py_require(
+  packages = c("fastai==2.7.17", "torch==2.4.1+cpu", "torchvision==0.19.1+cpu"),
+  python_version = "3.10"
+)
 # The R fastai package accesses submodules as e.g. `vision()$all$Resize`,
 # relying on `fastai.vision.all` having already been imported somewhere so
 # that `.all` shows up as an attribute of the `fastai.vision` module.
