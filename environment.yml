@@ -3,7 +3,10 @@ channels:
   - fastai
   - conda-forge
 dependencies:
+  - python=3.10
   - jupyter
-  - jupyter-cache  
-  - fastai
+  - jupyter-cache
+  - fastai=2.7.17
+  - openssl
+  - certifi
 
