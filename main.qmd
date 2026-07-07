@@ -51,6 +51,11 @@ format:
 # time Python is actually used, no separate conda/virtualenv setup required.
 library(reticulate)
 py_require(packages = "fastai==2.7.17", python_version = "3.10")
+# The R fastai package accesses submodules as e.g. `vision()$all$Resize`,
+# relying on `fastai.vision.all` having already been imported somewhere so
+# that `.all` shows up as an attribute of the `fastai.vision` module.
+# Import it eagerly here instead of counting on that happening implicitly.
+invisible(reticulate::import("fastai.vision.all"))
 ```
 
 ```{r setup, include=FALSE}
