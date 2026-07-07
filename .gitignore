@@ -1,31 +1,49 @@
-.Rproj.user
+# R and co
 .Rhistory
+.Rprofile
+.Rapp.history
 .RData
 .Ruserdata
-.Rhistory
-.RData
-.Rprofile
+*.Rproj
 .Rproj.user
+.Rproj.user/
+/*.Rcheck/
+renv/
 
-
-.quarto/
+# Python and co
+_environment
+/.micromamba/
 /.joblib
+/.pytest_cache/
+scripts/__pycache__/
+
+# Quarto tmp files
 /.quarto/
-DS_Store
-/.luarc.json
 /*_files
 /*_cache
 /_freeze
-_extensions/
-
-published-202204-gimenez-lynx.html
-published-202204-gimenez-lynx.pdf
-published-202204-gimenez-lynx.ipynb
-published-202204-gimenez-lynx.tex
-
-_environment
-/.micromamba/
 _site/
-logo_notext_white.png
+/cache/
+
+# Quarto extension files
+_extensions/
 logo_text_white.pdf
-/renv/
+logo_notext_white.png
+
+# Quarto output files
+main.pdf
+main.html
+main.ipynb
+main.tex
+
+# Latex compilation files
+*.aux
+*.log
+*.toc
+
+# Various system files
+DS_Store
+/.luarc.json
+
+
+**/*.quarto_ipynb

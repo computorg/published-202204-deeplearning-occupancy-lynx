@@ -1,9 +1,0 @@
-name: gimenez
-channels:
-  - fastai
-  - conda-forge
-dependencies:
-  - jupyter
-  - jupyter-cache  
-  - fastai
-
