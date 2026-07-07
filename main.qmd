@@ -46,8 +46,15 @@ format:
   computo-pdf: default
 ---
 
+```{r setup-python-env, include=FALSE}
+# reticulate provisions an isolated Python environment (via uv) the first
+# time Python is actually used, no separate conda/virtualenv setup required.
+library(reticulate)
+py_require(packages = "fastai==2.7.17", python_version = "3.10")
+```
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(tidy = FALSE, 
+knitr::opts_chunk$set(tidy = FALSE,
                       fig.width = 8, 
                       fig.height = 8, 
                       echo = FALSE,
