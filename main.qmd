@@ -996,6 +996,7 @@ We also found that occupancy probability estimates were similar whether we used 
 ```{r}
 #| column: page
 #| label: fig-four
+#| out-width: "100%"
 #| fig-cap: "Marginal occupancy probabilities for all three species (lynx, roe deer and chamois). Parameter estimates are from a multispecies occupancy model using either the ground truth dataset (in red) or the classified dataset (in blue-grey). Note that marginal occupancy probabilities are estimated with high precision for roe deer, which explain why the associated confidence intervals do not show."
 knitr::include_graphics("img/marginal_occ_penalized.png")
 ```
@@ -1006,6 +1007,7 @@ Because marginal occupancy probabilities were high, probabilities of co-occurren
 ```{r}
 #| column: page
 #| label: fig-five
+#| out-width: "100%"
 #| fig-cap: "Lynx occupancy probability conditional on the presence or absence of its preys (roe deer and chamois). Parameter estimates are from a multispecies occupancy model using either the ground truth dataset (in red) or the classified dataset (in blue-grey)."
 knitr::include_graphics("img/conditional_occ_penalized.png")
 ```
@@ -1144,13 +1146,13 @@ dls <- ImageDataLoaders_from_folder(
 
 Then we get the model architecture. For the sake of illustration, we use a resnet18 here, but we used a resnet50 to get the full results presented in the main text.
 
-```{bash, echo=FALSE}
+```{bash, echo=FALSE, results='hide'}
 FILE=~/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
 if test -f "$FILE"; then
-    echo "$FILE exists."
+  :
 else
   mkdir -p ~/.cache/torch/hub/checkpoints
-  wget -c https://download.pytorch.org/models/resnet18-f37072fd.pth
+  wget -q -c https://download.pytorch.org/models/resnet18-f37072fd.pth
   mv resnet18-f37072fd.pth ~/.cache/torch/hub/checkpoints/
 fi
 ```
