@@ -51,3 +51,10 @@ related-identifiers:
     identifier: "2108.11509"
 github-user: computorg
 repo: "published-202204-deeplearning-occupancy-lynx"
+subtitle: "Reproducible R workflow integrating models in computer vision and ecological statistics"
+date-modified: last-modified
+keywords: [computer-vision, deep-learning, species-distribution-modeling, ecological-statistics]
+bibliography: references.bib
+format:
+  computo-html: default
+  computo-pdf: default
